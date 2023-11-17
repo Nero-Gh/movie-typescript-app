@@ -1,14 +1,23 @@
 import React from "react";
 import MovieCard from "../../components/MovieCard";
-import { movies } from "../../utils/utils";
+import useFetchHook from "../../hooks/useFetchHook";
 
-type Props = {};
+const Movie = () => {
+  const {
+    data: { results: movies } = {},
+    loading,
+    error,
+  } = useFetchHook("https://api.themoviedb.org/3/movie/popular");
 
-const Movie = (props: Props) => {
+  console.log(movies);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
   return (
     <div className="flex flex-wrap gap-2 justify-between">
-      {movies.map((movie) => (
-        <MovieCard image={movie.image} id={movie.id} />
+      {movies?.map((movie) => (
+        <MovieCard image={movie.backdrop_path} id={movie.id} />
       ))}
     </div>
   );

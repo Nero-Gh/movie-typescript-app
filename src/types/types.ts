@@ -11,3 +11,7 @@ export interface Movie {
   cast: string[];
   description: string;
 }
+
+export interface UseMovieDataProps {
+  apiKey: string;
+}
