@@ -9,8 +9,6 @@ const Movie = () => {
     error,
   } = useFetchHook("https://api.themoviedb.org/3/movie/popular");
 
-  console.log(movies);
-
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 

@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="flex justify-between">
-      <div className="flex text-xl text-center  align-middle">
-        <PlayIcon className="h-6 w-6 text-black" />
-        <h1 className="">NeroUp</h1>
-      </div>
+      <a href="/">
+        <div className="flex text-xl text-center  align-middle">
+          <PlayIcon className="h-6 w-6 text-black" />
+          <h1 className="">NeroUp</h1>
+        </div>
+      </a>
       <div className="w-4/12 ">
         <form>
           <input

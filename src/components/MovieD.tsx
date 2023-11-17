@@ -4,6 +4,7 @@ import { Movie } from "../types/types";
 
 const MovieD = ({ name, year, cast, description, image }: Movie) => {
   const imageUrl = `https://image.tmdb.org/t/p/w500${image}`;
+
   return (
     <div className="flex gap-20">
       <div className="w-[40%] h-[400px]">
