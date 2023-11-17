@@ -3,10 +3,11 @@ import { images } from "../utils/utils";
 import { Movie } from "../types/types";
 
 const MovieD = ({ name, year, cast, description, image }: Movie) => {
+  const imageUrl = `https://image.tmdb.org/t/p/w500${image}`;
   return (
     <div className="flex gap-20">
       <div className="w-[40%] h-[400px]">
-        <img src={image} alt="" className="w-full h-full object-cover" />
+        <img src={imageUrl} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="w-[50%]">
         <div className="flex gap-5 align-middle my-3">

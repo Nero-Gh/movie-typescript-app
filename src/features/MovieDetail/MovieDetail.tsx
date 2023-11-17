@@ -3,6 +3,7 @@ import MovieD from "../../components/MovieD";
 import { useLocation } from "react-router-dom";
 import { movies } from "../../utils/utils";
 import useMovie from "../../hooks/useMovie";
+import useFetchMovie from "../../hooks/useMovie";
 
 const MovieDetail = () => {
   const location = useLocation();
