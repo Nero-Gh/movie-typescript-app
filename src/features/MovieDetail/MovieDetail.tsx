@@ -1,7 +1,6 @@
 import React from "react";
 import MovieD from "../../components/MovieD";
 import { useLocation } from "react-router-dom";
-import { movies } from "../../utils/utils";
 import useMovie from "../../hooks/useMovie";
 
 const MovieDetail = () => {
