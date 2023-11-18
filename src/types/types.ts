@@ -15,3 +15,15 @@ export interface Movie {
 export interface UseMovieDataProps {
   apiKey: string;
 }
+
+export type Theme = "light" | "dark";
+
+export interface ThemeContextProps {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export type ThemeContextType = {
+  theme: string;
+  toggleTheme: () => void;
+};

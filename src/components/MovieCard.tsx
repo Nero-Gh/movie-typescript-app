@@ -8,7 +8,7 @@ const MovieCard = ({ image, id }: Props) => {
   return (
     <div className=" w-[200px] h-[250px] shadow-md  flex flex-col">
       <div className="  rounded-md h-full">
-        <img src={imageUrl} alt="" className="w-full h-full" />
+        <img src={imageUrl} alt="" className="w-full h-full object-cover" />
       </div>
       <Link to={`/${id}`}>
         <button className="p-3 text-center w-full">Read More</button>
